@@ -12,7 +12,7 @@ const useStyles = createUseStyles(({ variant, theme } : { variant: string, theme
         fontWeight: 700,
         "&:hover": {
             cursor: "pointer",
-            background: theme.background.accent,
+            background: variant === "primary" ? theme.background.accent : theme.background.secondary
         }
     }
 }), { name: "button" });
