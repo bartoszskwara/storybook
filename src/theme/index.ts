@@ -16,6 +16,7 @@ export const theme: { [key: string]: ThemeType } = {
     light: {
         fontColor: {
             primary: "#ffffff",
+            contrast: "#000000",
             secondary: "#ffffff",
             accent: "#FFFFFF",
             warning: "#570303"
@@ -31,14 +32,15 @@ export const theme: { [key: string]: ThemeType } = {
             warning: "#f05545"
         },
         border: {
-            primary: "#e6e6e6",
+            primary: "#356b96",
             secondary: "#d986a4"
         }
     },
     dark: {
         fontColor: {
             primary: "#FFFFFF",
-            secondary: "#212121",
+            contrast: "#FFFFFF",
+            secondary: "#FFFFFF",
             accent: "#FFFFFF",
             warning: "#ffffff"
         },
