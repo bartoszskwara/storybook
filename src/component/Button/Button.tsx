@@ -5,14 +5,14 @@ import {ThemeContext, ThemeType} from "../../theme";
 const useStyles = createUseStyles(({ variant, theme } : { variant: string, theme: ThemeType }) => ({
     root: {
         color: variant === "primary" ? theme.fontColor.primary : theme.fontColor.secondary,
-        background: variant === "primary" ? theme.background.primary : theme.background.secondary,
-        border: theme.border.primary,
+        background: theme.background[variant],
+        border: theme.border[variant],
         padding: 10,
         borderRadius: 5,
         fontWeight: 700,
         "&:hover": {
             cursor: "pointer",
-            background: variant === "primary" ? theme.background.accent : theme.background.secondary
+            background: theme.background[`${variant}Light`]
         }
     }
 }), { name: "button" });

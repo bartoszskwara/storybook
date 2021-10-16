@@ -2,38 +2,37 @@ import React from "react";
 
 export type ThemeType = {
     fontColor: {
-        primary: string,
-        secondary: string,
-        accent: string,
-        warning: string
+        [key: string]: string
     },
     background: {
-        primary: string,
-        secondary: string,
-        accent: string,
-        warning: string
+        [key: string]: string
     },
     border: {
-        primary: string
+        [key: string]: string
     }
 };
 
-export const theme = {
+export const theme: { [key: string]: ThemeType } = {
     light: {
         fontColor: {
-            primary: "#FFFFFF",
-            secondary: "#212121",
+            primary: "#ffffff",
+            secondary: "#ffffff",
             accent: "#FFFFFF",
             warning: "#570303"
         },
         background: {
-            primary: "#103d85",
-            secondary: "#8a8a8a",
+            primary: "#01579b",
+            primaryLight: "#4f83cc",
+            primaryDark: "#002f6c",
+            secondary: "#d81b60",
+            secondaryLight: "#ff5c8d",
+            secondaryDark: "#a00037",
             accent: "#7e52cc",
-            warning: "#de5757"
+            warning: "#f05545"
         },
         border: {
-            primary: "#e6e6e6"
+            primary: "#e6e6e6",
+            secondary: "#d986a4"
         }
     },
     dark: {
@@ -41,16 +40,21 @@ export const theme = {
             primary: "#FFFFFF",
             secondary: "#212121",
             accent: "#FFFFFF",
-            warning: "#570303"
+            warning: "#ffffff"
         },
         background: {
-            primary: "#103d85",
-            secondary: "#8a8a8a",
+            primary: "#212121",
+            primaryLight: "#484848",
+            primaryDark: "#000000",
+            secondary: "#3949ab",
+            secondaryLight: "#6f74dd",
+            secondaryDark: "#00227b",
             accent: "#7e52cc",
-            warning: "#de5757"
+            warning: "#7f0000"
         },
         border: {
-            primary: "#e6e6e6"
+            primary: "#454545",
+            secondary: "#7179a8"
         }
     }
 }
